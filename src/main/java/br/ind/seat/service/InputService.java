@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.gson.Gson;
@@ -82,7 +83,6 @@ public class InputService {
 		return inputs;
 	}
 
-	@Test
 	public List<Histograma> histograma() {
 		Long minuto = 300000L;
 		Integer quantidade = 0;
@@ -113,6 +113,7 @@ public class InputService {
 		return histogramas;
 	}
 
+	@Test
 	public void postInput() throws IOException {
 
 		// Define the server endpoint to send the HTTP request to
@@ -137,14 +138,16 @@ public class InputService {
 		fila.setPostTo(postTo);
 
 		gson = new Gson();
-		String json = gson.toJson(fila.getPostTo());
+		String json = gson.toJson(fila.getPostTo().getResultado());
+		String resultado = json.replaceAll("\\[","").replaceAll("\\]","");
 
-		System.out.println(json);
+		System.out.println(resultado);
 
 		// Writing the post data to the HTTP request body
 		BufferedWriter httpRequestBodyWriter = new BufferedWriter(
 				new OutputStreamWriter(urlConnection.getOutputStream()));
-		httpRequestBodyWriter.write("nome=" + postTo.getNome() + "&chave=" + postTo.getChave() + "&resultado=" + json);
+		httpRequestBodyWriter
+				.write("nome=" + postTo.getNome() + "&chave=" + postTo.getChave() + "&resultado=" + resultado);
 
 		httpRequestBodyWriter.close();
 		// Reading from the HTTP response body
