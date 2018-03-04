@@ -2,32 +2,16 @@ package br.ind.seat.service;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicHeader;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
 import org.junit.Test;
-import org.omg.CORBA.portable.OutputStream;
 
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
@@ -63,7 +47,6 @@ public class InputService {
 
 		inputs = new ArrayList<>();
 		inputOrderService = new InputOrderService();
-
 
 		for (int i = 0; i < fila.getInput().size(); i++) {
 			inputOrderService = fila.getInput().get(i);
@@ -111,14 +94,17 @@ public class InputService {
 
 			histograma = new Histograma();
 			histograma.setQuantidade(quantidade);
-			
+
 			histograma.setMinutos(String.format("%02d:%02d", TimeUnit.MILLISECONDS.toHours(minuto),
 					TimeUnit.MILLISECONDS.toMinutes(minuto) % 60));
-					
+
 			histogramas.add(histograma);
-			System.out.println("< - " + String.format("%02d:%02d", TimeUnit.MILLISECONDS.toHours(minuto),
-					TimeUnit.MILLISECONDS.toMinutes(minuto) % 60) + " - " + histogramas.get(i).getMinutos());
-			
+			System.out
+					.println("< - "
+							+ String.format("%02d:%02d", TimeUnit.MILLISECONDS.toHours(minuto),
+									TimeUnit.MILLISECONDS.toMinutes(minuto) % 60)
+							+ " - " + histogramas.get(i).getMinutos());
+
 			minuto = minuto + 300000L;
 			quantidade = quantidade + 1;
 			// System.out.println(histograma.get(i).getMin()+"");

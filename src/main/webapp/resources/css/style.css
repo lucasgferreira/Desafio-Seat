@@ -1,12 +1,17 @@
 @CHARSET "UTF-8";
 
-.banner {
-	height: 5em;
+.jumbotron {
+	background-color: #607D8B !important;
+}
+
+.lead a {
+	color: white !important;
 }
 
 .ui-datatable .ui-datatable-header {
 	text-align: right !important;
 	background-color: #607D8B !important;
+	color: white !important;
 }
 
 thead .ui-column-title {
@@ -14,11 +19,8 @@ thead .ui-column-title {
 	font-size: 12pt;
 }
 
-.sticky-top {
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	z-index: 1020;
+.bg-dark {
+	background-color: #212121 !important;
 }
 
 .labelTotal {
