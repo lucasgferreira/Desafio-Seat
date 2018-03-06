@@ -67,27 +67,6 @@
 							filterBy="#{inputOrderServices.prioridade}">
 							<h:outputText value="#{inputOrderServices.prioridade}" />
 						</p:column>
-						<p:column headerText="Chamada"
-							sortBy="#{inputOrderServices.chamada}"
-							filterBy="#{inputOrderServices.chamada}">
-							<h:outputText value="#{inputOrderServices.chamada}" />
-						</p:column>
-						<p:column headerText="Guiche"
-							sortBy="#{inputOrderServices.guiche}"
-							filterBy="#{inputOrderServices.guiche}">
-							<h:outputText value="#{inputOrderServices.guiche}" />
-						</p:column>
-
-						<p:column headerText="Atendente"
-							sortBy="#{inputOrderServices.atendente}"
-							filterBy="#{inputOrderServices.atendente}">
-							<h:outputText value="#{inputOrderServices.atendente}" />
-						</p:column>
-
-						<p:column headerText="Fim" sortBy="#{inputOrderServices.fim}"
-							filterBy="#{inputOrderServices.fim}">
-							<h:outputText value="#{inputOrderServices.fim}" />
-						</p:column>
 
 						<p:column headerText="Espera"
 							sortBy="#{inputOrderServices.espera}"
@@ -118,7 +97,7 @@
 						<p:column headerText="Histograma com os tempos de espera"
 							width="400">
 							<h:outputText
-								value="#{histogramas.quantidade} - Senhas esperaram menos de #{histogramas.minutos} - minutos" />
+								value="#{histogramas.quantidade} - #{histogramas.minutos}" />
 						</p:column>
 
 					</p:dataTable>

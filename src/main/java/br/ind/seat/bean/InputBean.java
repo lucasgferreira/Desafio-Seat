@@ -9,7 +9,7 @@ import javax.faces.bean.ViewScoped;
 
 import br.ind.seat.model.Histograma;
 import br.ind.seat.model.InputOrderService;
-import br.ind.seat.service.InputService;
+import br.ind.seat.service.Milestone3;
 
 @ManagedBean
 @ViewScoped
@@ -50,9 +50,9 @@ public class InputBean implements Serializable {
 
 	@PostConstruct
 	public void listar() {
-		InputService inputService = new InputService();
+		Milestone3 inputService = new Milestone3();
 
-		inputOrderServices = inputService.getInputs();
+		inputOrderServices = inputService.getMilestone3();
 		histogramas = inputService.histograma();
 	}
 
