@@ -52,6 +52,7 @@ public class Milestone3 extends Milestone2 {
 	// para execultar o JUNIT no postMilestone3() use o @Ignore no postMilestone2 na
 	// classe Milestone2
 	@Test
+	@Ignore
 	public void postMilestone3() throws IOException {
 
 		// Define the server endpoint to send the HTTP request to
