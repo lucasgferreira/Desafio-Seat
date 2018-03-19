@@ -9,17 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.Ignore;
-import org.junit.Test;
 
 import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 
 import br.ind.seat.model.Fila;
-import br.ind.seat.model.Histograma;
 import br.ind.seat.model.InputOrderService;
 import br.ind.seat.model.PostTo;
 import br.ind.seat.util.CustomComparator;
