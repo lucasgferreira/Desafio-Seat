@@ -8,7 +8,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -50,9 +49,9 @@ public class Milestone3 extends Milestone2 {
 	}
 
 	// para execultar o JUNIT no postMilestone3() use o @Ignore no postMilestone2 na
-	// classe Milestone2
-	@Test
-	@Ignore
+//	// classe Milestone2
+//	@Test
+//	@Ignore
 	public void postMilestone3() throws IOException {
 
 		// Define the server endpoint to send the HTTP request to
