@@ -65,8 +65,8 @@ public class Milestone1 {
 		return inputs;
 	}
 
-	@Test
-	@Ignore
+//	@Test
+//	@Ignore
 	public void postMilestone1() throws IOException {
 
 		// Define the server endpoint to send the HTTP request to
