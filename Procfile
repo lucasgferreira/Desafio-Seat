@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* Desafio-Seat
+web: sh target/bin/webapp
